@@ -1,5 +1,5 @@
 {
-    "name":         "unsized/html-builder",
+    "name":         "unsized/htmlbuilder",
     "description":  "Build pagespeed optimised inline html from  css, html, svg component libraries",
 
     "license":      "MIT",
@@ -15,7 +15,7 @@
 
     "autoload": {
         "psr-4": {
-            "unsized\\html_builder\\": "src/"
+            "unsized\\htmlbuilder\\": "src/"
         }
     },
 

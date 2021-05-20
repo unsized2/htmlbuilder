@@ -1,4 +1,4 @@
-<?php namespace Unsized\Html_builder;
+<?php namespace unsized\htmlbuilder;
 
 //require svg_templates.php
 
