@@ -1,0 +1,26 @@
+{
+    "name":         "unsized/html-builder",
+    "description":  "Build pagespeed optimised inline html from  css, html, svg component libraries",
+
+    "license":      "MIT",
+    "type":         "library",
+    "authors": [
+            {
+                "name":     "Clive Turner",
+                "email":    "clive@unsized.uk",
+                "homepage": "https://unsized.uk",
+                "role":     "Developer"
+            }
+        ],
+
+    "autoload": {
+        "psr-4": {
+            "unsized\\html_builder\\": "src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7|^8"
+    }
+}
