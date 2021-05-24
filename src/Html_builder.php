@@ -21,17 +21,16 @@ class Html_builder
 {
 public $svg_symbols=array();
 
-function __construct ($svg_dir='' )
+function __construct ($svg_dir=SYMBOLS )
 {
 $this->svg_dir=$svg_dir;
-$this->svg_symbols=array();
 $this->belowTF();
 }
 
 //function to avoid duplication. SVG can be loaded only once. Register is a list of those already loaded.
 //Echo warnings of svg loading svg of the same name [duplicate]
 
-function svgSymbols( $svg_array=array(), $group='below_TF', $svg_dir = '')
+function svgSymbols( $svg_array=array(), $group='', $svg_dir = '')
 {
 //creates an array of svg and associated files grouped by priority _gp
 //no duplicate checking [just overwrites].
@@ -41,9 +40,13 @@ if (empty($svg_dir)){
     $svg_dir=$this->svg_dir;
     }
 
+if (empty($group)){
+    $group=$this->getFold();
+    }
+
 foreach ($svg_array as $k => $svg_name)
 {
-  $this->svg_symbols[$group][$svg_name]=$svg_dir.$svg_name.'.svg';
+  $this->svg_symbols[$group][$svg_name]=$svg_dir.'/'.$svg_name.'.svg';
     }
 //print_r ($this->svg_symbols);
 }
@@ -82,7 +85,6 @@ function aboveTF(){
 function belowTF(){
   $this->fold = 'belowTF';
 }
-
 
 function getFold(){
   return $this->fold;
