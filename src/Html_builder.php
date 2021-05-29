@@ -19,12 +19,14 @@ The cached production page has placeholders for dynamic content. ***/
 
 class Html_builder
 {
+
+public $svg_dir = FRONT_END.'/symbols';
 public $svg_symbols=array();
 
-function __construct ($svg_dir=SYMBOLS )
+function __construct ( )
 {
-$this->svg_dir=$svg_dir;
-$this->belowTF();
+//$this->svg_dir=$svg_dir;
+$this->belowTF();  //start below the fold, then construct above the fold
 }
 
 //function to avoid duplication. SVG can be loaded only once. Register is a list of those already loaded.
